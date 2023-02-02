@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba en clase</title>
+
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.6.3.js"></script>
+
+</head>
+
+<body>
+
+    <label for="nombreid">Nombre</label><br>
+    <input type="text" name="nombre" id="nombreid"><br><br>
+
+    <label for="apellidoid">Apellido</label><br>
+    <input type="text" name="apellido" id="apellidoid"><br><br>
+
+    <label for="edadid">Edad</label><br>
+    <input type="number" name="edad" id="edadid"><br><br>
+
+    <label for="civilid">Estado civil</label><br>
+    <select name="civil" id="civilid">
+        <option value="none">...</option>
+        <option value="casado">Casado(a)</option>
+        <option value="soltero">Soltero(a)</option>
+        <option value="viudo">Viudo(a)</option>
+    </select><br><br>
+
+    <label for="sexoid">Sexo</label><br>
+    <select name="sexo" id="sexoid">
+        <option value="none">...</option>
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+        <option value="nei">No especificado</option>
+    </select><br><br>
+
+    <label for="sueldoid">Sueldo</label><br>
+    <select name="sueldo" id="sueldoid">
+        <option value="none">...</option>
+        <option value="opc1">Menos de 1000</option>
+        <option value="opc2">Entre 1000 y 2500</option>
+        <option value="opc3">Mas de 2500</option>
+    </select><br><br>
+
+    <button onclick="calcular($('#nombreid').val(), $('#apellidoid').val(), $('#edadid').val(), $('#civilid').val(), $('#sexoid').val(), $('#sueldoid').val())">Enviar</button>
+
+    <br><br>
+
+    <div id="resp"></div>
+
+</body>
+</html>
